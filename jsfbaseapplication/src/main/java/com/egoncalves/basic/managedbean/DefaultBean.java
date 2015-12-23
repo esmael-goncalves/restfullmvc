@@ -1,4 +1,4 @@
-package com.egoncalves.basic.bean;
+package com.egoncalves.basic.managedbean;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
