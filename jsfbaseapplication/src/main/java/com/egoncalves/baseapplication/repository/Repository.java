@@ -2,7 +2,17 @@ package com.egoncalves.baseapplication.repository;
 
 import java.util.List;
 
-public interface Repository<T> {
+/**
+ * Interface that represents the Repository Pattern. 
+ * It contains the basic methods to perform operations like save, update,
+ * delete and search items in the database.
+ * 
+ * @author Esmael
+ *
+ * @param <PK> Type of Primary Key of the Entity's Repository
+ * @param <T> Type of the Entity's Repository
+ */
+public interface Repository<PK, T> {
 	void save(T entity);
 	
 	void save(List<T> entities);
@@ -11,7 +21,7 @@ public interface Repository<T> {
 
 	void update(T entity);
 
-	T findById(long entityId);
+	T findById(PK entityId);
 
 	List<T> findAll();
 }

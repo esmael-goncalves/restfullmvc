@@ -1,4 +1,4 @@
-package com.egoncalves.util;
+package com.egoncalves.baseapplication.producer;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
