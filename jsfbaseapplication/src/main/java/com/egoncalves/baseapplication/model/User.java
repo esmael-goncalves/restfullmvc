@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "User")
-public class User implements Serializable {
+public class User implements BaseEntity, Serializable {
 
 	private static final long serialVersionUID = 1L;
 

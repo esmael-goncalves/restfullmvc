@@ -2,6 +2,8 @@ package com.egoncalves.baseapplication.repository;
 
 import java.util.List;
 
+import com.egoncalves.baseapplication.model.BaseEntity;
+
 /**
  * Interface that represents the Repository Pattern. 
  * It contains the basic methods to perform operations like save, update,
@@ -12,7 +14,7 @@ import java.util.List;
  * @param <PK> Type of Primary Key of the Entity's Repository
  * @param <T> Type of the Entity's Repository
  */
-public interface Repository<PK, T> {
+public interface Repository<PK, T extends BaseEntity> {
 	void save(T entity);
 	
 	void save(List<T> entities);

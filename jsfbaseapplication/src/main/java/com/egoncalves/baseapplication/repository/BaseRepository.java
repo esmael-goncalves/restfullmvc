@@ -6,14 +6,16 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
+import com.egoncalves.baseapplication.model.BaseEntity;
+
 /**
  * Base implementation of the interface {@link #Repository}
  * @author Esmael
  *
- * @param <PK> Type of Primary Key of the Entity's Repository
+ * @param <P> Type of Primary Key of the Entity's Repository
  * @param <T> Type of the Entity's Repository
  */
-public abstract class BaseRepository<PK, T> implements Repository<PK, T> {
+public abstract class BaseRepository<P, T extends BaseEntity> implements Repository<P, T> {
 
 	@Inject
 	private EntityManager entityManager;
@@ -47,7 +49,7 @@ public abstract class BaseRepository<PK, T> implements Repository<PK, T> {
 	}
 
 	@Override
-	public T findById(PK entityId) {
+	public T findById(P entityId) {
 		return (T) entityManager.find(getTypeClass(),entityId); 
 	}
 

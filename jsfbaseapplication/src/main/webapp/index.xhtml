@@ -1,4 +1,4 @@
-<ui:composition template="/WEB-INF/template/Layout.xhtml"
+<ui:composition template="/WEB-INF/template/layout.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
@@ -7,6 +7,6 @@
 	<ui:define name="titulo">JSF Base Application Template Index</ui:define>
 
 	<ui:define name="corpo">
-		<h:outputText value="#{defaultBean.message}" />
+		<h:outputText value="#{msg['hello.application']}" />
 	</ui:define>
 </ui:composition>

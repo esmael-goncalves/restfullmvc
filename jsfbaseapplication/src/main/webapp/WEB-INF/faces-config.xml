@@ -9,6 +9,10 @@
 		<message-bundle>
 			com.egoncalves.resources.Messages
 		</message-bundle>
+		<resource-bundle>
+			<base-name>com.egoncalves.resources.Messages</base-name>
+			<var>msg</var>
+		</resource-bundle>
 	</application>
 
 </faces-config>
